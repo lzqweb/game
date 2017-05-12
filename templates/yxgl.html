@@ -1,0 +1,31 @@
+<section class="title" id="header">
+	<div class="fh"><img src="img/fh.png" width="16"/><span>攻略大全</span></div>
+<div class="menu search1"><img src="img/menu.png"/></div>
+	<div class="sub_menu">
+		<ul>
+			<li><a href="#/main">首页</a></li>
+			<li><a href="#/azdj">单机</a></li>
+			<li><a href="#/azdj">网游</a></li>
+			<li class="sub_add1"><a href="#/azdj">应用</a></li>
+			<li><a href="#/yxgl">攻略</a></li>
+			<li><a href="#/xwzx">资讯</a></li>
+		</ul>
+	</div>
+</section>
+<div class="gai"></div>
+<div class="clear"></div>
+<dl class="newslist">
+	<dt>
+		<ul ng-controller="newsCtrl">
+			<li ng-repeat="i in strategy">
+	            <a href="#/details" ng-click="details(i.name,i.img,i.content)"><img src="{{i.img}}"></a>
+				<h3><a href="#/details" ng-click="details(i.name,i.img,i.content)">{{i.name}}</a></h3>
+				<p>{{i.news}}</p>
+	       </li>
+	    </ul>
+	</dt>
+</dl>
+<section class="footer">
+	 <a id="ret">回到顶部</a>
+</section>
+<script src="js/common.js"></script>

@@ -1,0 +1,52 @@
+<section class="title" id="header">
+	<div class="fh"><img src="img/fh.png" width="16"/><span>游戏详情</span></div>
+	<div class="menu search1"><img src="img/menu.png"/></div>
+	<div class="sub_menu">
+		<ul>
+			<li><a href="#/main">首页</a></li>
+			<li><a href="#/azdj">单机</a></li>
+			<li><a href="#/azdj">网游</a></li>
+			<li class="sub_add1"><a href="#/azdj">应用</a></li>
+			<li><a href="#/yxgl">攻略</a></li>
+			<li><a href="#/xwzx">资讯</a></li>
+		</ul>
+	</div>
+</section>
+<div class="gai"></div>
+<section class="detail">
+	<ul class="yxxq">
+		<li>
+			<img src="{{img}}"/>
+			<a href="javascript:;">下载</a>
+		</li>
+		<li>
+			<div class="yxmc">{{name}}</div>
+			<div class="yxpf"><span>{{pf}}分</span>(已有{{people}}人评分)</div>
+			<div class="yxdx">大小：{{dx}}</div>
+			<div class="gxsj">更新：{{gx}}</div>
+			<div class="dqbb">当前版本：{{bb}}</div>
+			<div class="yxrq">人气：{{rq}}</div>
+		</li>
+	</ul>
+	<div class="clear"></div>
+	<ul class="nrzy">
+		<li>内容摘要</li>
+		<li>《{{name}}》是一款动作射击游戏，是由株式会社カプコン开发制作。本作是CAPCOM经典动作游戏《怪物猎人》的最新作，本作是以原始社会作为游戏的背景，虚构了许多现实中不存在的怪物，然后玩家在游戏中扮演一名猎人，在原始世界进行狩猎，完成各种任务。本作绝对能带给玩家原始风味十足的生活体验，喜欢的玩家...</li>
+	</ul>
+	<div class="yxtj" ng-controller="tjsyCtrl">
+		<div>
+			<span class="yxtj_t">游戏推荐</span>
+			<a href="javascript:;" class="more">更多</a>
+		</div>
+		<ul class="game_con">
+			<li ng-repeat="item in yxtj">
+				<a href="#/detail" ng-click="detail(item.img,item.name,item.rq,item.dx,item.pf,item.gx,item.people,item.bb)"><img src="{{item.img}}"/></a>
+				<div><a href="#/detail" ng-click="detail(item.img,item.name,item.rq,item.dx,item.pf,item.gx,item.people,item.bb)">{{item.name}}</a></div>
+			</li>
+		</ul>
+	</div>
+</section>
+<section class="footer">
+	<a id="ret">回到顶部</a>
+</section>
+<script src="js/common.js"></script>

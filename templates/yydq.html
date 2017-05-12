@@ -1,0 +1,31 @@
+<section class="title" id="header">
+	<div class="fh"><img src="img/fh.png" width="16"/><span>应用</span></div>
+	<div class="menu search1"><img src="img/menu.png"/></div>
+	<div class="sub_menu">
+		<ul>
+			<li><a href="#/main">首页</a></li>
+			<li><a href="#/azdj">单机</a></li>
+			<li><a href="#/azdj">网游</a></li>
+			<li class="sub_add1"><a href="#/azdj">应用</a></li>
+			<li><a href="#/yxgl">攻略</a></li>
+			<li><a href="#/xwzx">资讯</a></li>
+		</ul>
+	</div>
+</section>
+<div class="gai"></div>
+
+<section class="content1">
+	<ul class="con_tjsy" ng-controller="tjsyCtrl">
+		<li ng-repeat="item in yydq"><a href="#/detail"  ng-click="detail(item.img,item.name,item.rq,item.dx,item.pf,item.gx,item.people,item.bb)">
+			<img src="{{item.img}}"/>
+			<div>{{item.name}}</div></a>
+			<p>人气：{{item.rq}}</p>
+			<p>大小：{{item.dx}}</p>
+			<a href="#/detail"  ng-click="detail(item.img,item.name,item.rq,item.dx,item.pf,item.gx,item.people,item.bb)"><button class="an"><img src="img/xiazai.png" width="12"/><span>抢先下载</span></button></a>
+		</li>
+	</ul>
+</section>
+<section class="footer">
+	 <a id="ret">回到顶部</a>
+</section>
+<script src="js/common.js"></script>

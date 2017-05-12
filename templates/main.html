@@ -1,0 +1,111 @@
+	<section class="title" id="header">
+		<div class="menu"><img src="img/menu.png"/></div>
+		<div class="name">乐玩</div>
+		<!--<a class="search"><img src="img/search.png"/></a>-->
+		<div class="sub_menu">
+			<ul>
+				<li><a href="#/main">首页</a></li>
+				<li><a href="#/azdj">单机</a></li>
+				<li><a href="#/azwy">网游</a></li>
+				<li class="sub_add1"><a href="#/yydq">应用</a></li>
+				<li><a href="#/yxgl">攻略</a></li>
+				<li><a href="#/xwzx">资讯</a></li>
+			</ul>
+		</div>
+	</section>
+	<div class="gai"></div>
+	<div class="clear"></div>
+	<section >
+		<ul class="nav">
+			<li><a href="#/azdj"><p class="nav1"></p><p>安卓单机</p></a></li>
+			<li><a href="#/azwy"><p class="nav2"></p><p>安卓网游</p></a></li>
+			<li><a href="#/yydq"><p class="nav3"></p><p>手机应用</p></a></li>
+			<li><a href="#/yxgl"><p class="nav4"></p><p>攻略大全</p></a></li>
+			<li style="margin-right: 0;"><a href="#/xwzx"><p class="nav5"></p><p>新闻资讯</p></a></li>
+		</ul>
+	</section>
+	<div class="clear"></div>
+	<section class="con_title">
+		<div class="tjsy">推荐手游</div>
+		<a href="#/azdj">更多</a>
+	</section>
+	<section class="content1">
+		<ul class="con_tjsy" ng-controller="tjsyCtrl">
+			<li ng-repeat="item in tjsy"><a href="#/detail"  ng-click="detail(item.img,item.name,item.rq,item.dx,item.pf,item.gx,item.people,item.bb)">
+				<img src="{{item.img}}"/>
+				<div>{{item.name}}</div></a>
+				<p>人气：{{item.rq}}</p>
+				<p>大小：{{item.dx}}</p>
+				<a href="#/detail"  ng-click="detail(item.img,item.name,item.rq,item.dx,item.pf,item.gx,item.people,item.bb)"><button class="an"><img src="img/xiazai.png" width="12"/><span>抢先下载</span></button></a>
+			</li>
+		</ul>
+	</section>
+	<div class="clear"></div>
+	<section class="con_title">
+		<div class="tjsy">经典手游</div>
+		<a href="#/azdj">更多</a>
+	</section>
+	<section class="content1">
+		<ul class="con_tjsy" ng-controller="tjsyCtrl">
+			<li ng-repeat="item in jdyx"><a href="#/detail" ng-click="detail(item.img,item.name,item.rq,item.dx,item.pf,item.gx,item.people,item.bb)">
+				<img src="{{item.img}}"/>
+				<div>{{item.name}}</div></a>
+				<p>人气：{{item.rq}}</p>
+				<p>大小：{{item.dx}}</p>
+				<a href="#/detail"  ng-click="detail(item.img,item.name,item.rq,item.dx,item.pf,item.gx,item.people,item.bb)"><button class="an"><img src="img/xiazai.png" width="12"/><span>抢先下载</span></button></a>
+			</li>
+		</ul>
+	</section>
+	<div class="clear"></div>
+	<section class="con_title">
+		<div class="tjsy">最新资讯</div>
+		<a href="#/xwzx">更多</a>
+	</section>
+	<dl class="newslist">
+		<dt>
+		    <ul ng-controller="newsCtrl">
+				<li ng-repeat="i in news1">
+		            <a href="#/details" ng-click="details(i.name,i.img,i.content)"><img src="{{i.img}}"></a>
+					<h3><a href="#/details" ng-click="details(i.name,i.img,i.content)">{{i.name}}</a></h3>
+					<p>{{i.news}}</p>
+		       </li>
+		    </ul>
+		</dt>
+    	<dd>
+            <ul>
+                <li><span>[新游速递]</span><a href="javascript:;">《全民切水果》蜕变之旅变得更加精彩纷呈 来体验下？</a></li>
+                <li><span>[新游速递]</span><a href="javascript:;">腾讯新作《天天来塔防》来袭 天天系列很强势</a></li>
+                <li><span>[业内新闻]</span><a href="javascript:;">3D电影《秦时明月》爆笑NG预告 天明、少羽基情满满</a></li>
+                <li><span>[业内新闻]</span><a href="javascript:;">《欢乐西游》8月7日停机维护 开服时间尚未确定</a></li>
+                <li><span>[新游速递]</span><a href="javascript:;">《西游降魔篇》8月5日不删档内测 七十二变变身系统首曝</a></li>
+            </ul>
+        </dd>
+    </dl>
+	<section class="con_title">
+		<div class="tjsy">最新攻略</div>
+		<a href="#/yxgl">更多</a>
+	</section>
+	<dl class="newslist">
+		<dt>
+			<ul ng-controller="newsCtrl">
+				<li ng-repeat="i in strategy1">
+		            <a href="#/details" ng-click="details(i.name,i.img,i.content)"><img src="{{i.img}}"></a>
+					<h3><a href="#/details" ng-click="details(i.name,i.img,i.content)">{{i.name}}</a></h3>
+					<p>{{i.news}}</p>
+		       </li>
+		    </ul>
+		</dt>
+    	<dd>
+            <ul>
+                <li><span>[攻略]</span><a href="javascript:;">《激流快艇3》怎么旋转 超酷杂技秀起来</a></li>
+                <li><span>[攻略]</span><a href="javascript:;">《猎鱼达人》钻石怎么得 渔场快速获取钻石攻略</a></li>
+                <li><span>[攻略]</span><a href="javascript:;">《王者荣耀》孙悟空怎么玩 孙悟空出装铭文搭配推荐</a></li>
+                <li><span>[攻略]</span><a href="javascript:;">《球球大作战》全是套路第十九期 鸡年第一弹强势来袭</a></li>
+                <li><span>[攻略]</span><a href="javascript:;">《泰拉瑞亚》腿怎么获得 青蛙腿合成与属性作用介绍</a></li>
+            </ul>
+        </dd>
+    </dl>
+   	<section class="footer">
+   		 <a id="ret">回到顶部</a>
+   	</section>
+	<script src="js/common.js"></script>

@@ -1,0 +1,37 @@
+var app = angular.module("game",["ui.router"]);
+app.config(function($stateProvider,$urlRouterProvider){
+	$urlRouterProvider.when("","/main");//当前的页面
+	$stateProvider
+	.state("main",{
+		url:"/main",
+		templateUrl:"./templates/main.html"
+	})
+	.state("detail",{
+		url:"/detail",
+		templateUrl:"./templates/detail.html"
+	})
+	.state("azdj",{
+		url:"/azdj",
+		templateUrl:"./templates/azdj.html"
+	})
+	.state("azwy",{
+		url:"/azwy",
+		templateUrl:"./templates/azwy.html"
+	})
+	.state("yydq",{
+		url:"/yydq",
+		templateUrl:"./templates/yydq.html"
+	})
+	.state("yxgl",{
+		url:"/yxgl",
+		templateUrl:"./templates/yxgl.html"
+	})
+	.state("xwzx",{
+		url:"/xwzx",
+		templateUrl:"./templates/xwzx.html"
+	})
+	.state("details",{
+		url:"/details",
+		templateUrl:"./templates/details.html"
+	})
+})
